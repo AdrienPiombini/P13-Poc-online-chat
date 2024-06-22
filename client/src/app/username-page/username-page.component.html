@@ -1,0 +1,20 @@
+<div id="username-page">
+  <div class="username-page-container">
+    <h2>Enter Username</h2>
+    <form (ngSubmit)="connect()">
+      <div class="form-group">
+        <input
+          type="text"
+          [(ngModel)]="username"
+          name="username"
+          required
+          placeholder="Enter your name"
+          class="form-control"
+        />
+      </div>
+      <button type="submit" class="username-submit primary">
+        Start Chatting
+      </button>
+    </form>
+  </div>
+</div>

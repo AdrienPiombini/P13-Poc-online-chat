@@ -1,0 +1,28 @@
+<div id="chat-page">
+  <div class="chat-container">
+    <ul id="messageArea">
+      <li *ngFor="let message of messages">
+        <span>{{ message.sender }}</span
+        >: {{ message.content }}
+      </li>
+    </ul>
+    <form (ngSubmit)="sendMessage()" id="messageForm" name="messageForm">
+      <div class="form-group">
+        <div class="input-group clearfix">
+          <div class="username-display">
+            <strong>{{ username }}</strong>
+          </div>
+          <input
+            type="text"
+            [(ngModel)]="messageContent"
+            name="message"
+            required
+            placeholder="Type a message..."
+            class="form-control"
+          />
+          <button type="submit" class="primary">Send</button>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
